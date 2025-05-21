@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Placed | Hunger's Hurt</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: rgb(233, 225, 225);
+        animation: fadeIn 0.8s ease-in;
+      }
+
+      .confirmation-box {
+        background: white;
+        padding: 3rem 2rem;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 90%;
+        animation: slideFade 0.8s ease-in-out 0.2s; /* Add this here */
+      }
+
+      .confirmation-box i {
+        font-size: 3rem;
+        color: #27ae60;
+        margin-bottom: 1rem;
+        animation: pop 0.4s ease-in-out;
+      }
+
+      .confirmation-box h2 {
+        margin: 0;
+        font-size: 2rem;
+        color: rgb(220, 107, 15);
+      }
+
+      .confirmation-box p {
+        color: #444;
+        margin: 1rem 0 2rem;
+        line-height: 1.6;
+      }
+
+      .home-button {
+        background: #666;
+        color: white;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.2s ease;
+        display: inline-block;
+      }
+
+      .home-button:hover {
+        background: rgb(220, 107, 15);
+        transform: translateY(-2px);
+      }
+
+      @keyframes slideFade {
+        from {
+          transform: translateY(-30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes pop {
+        0% {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .confirmation-box {
+          padding: 2rem 1.5rem;
+        }
+
+        .confirmation-box h2 {
+          font-size: 1.5rem;
+        }
+
+        .confirmation-box i {
+          font-size: 2.5rem;
+        }
+
+        .home-button {
+          font-size: 0.9rem;
+          padding: 0.6rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="confirmation-box">
+      <i class="fas fa-check-circle"></i>
+      <h2>Order Placed Successfully!</h2>
+      <p>
+        Thank you for ordering from Hunger's Hurt.<br />
+        Your delicious food will be with you soon.
+      </p>
+      <a href="index.html" class="home-button">Back to Home</a>
+    </div>
+  </body>
+</html>

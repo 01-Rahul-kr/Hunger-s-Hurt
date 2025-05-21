@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart | Hunger's Hurt</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fdfdfd;
+        margin: 0;
+        animation: fadeIn 1s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #e67e22;
+        padding: 1rem 2rem;
+        color: white;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #ffd4a3;
+      }
+
+      .cart-container {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+        background-color: rgb(245, 245, 245);
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        animation: slideUp 0.8s ease;
+      }
+
+      @keyframes slideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .cart-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+        transform: scale(1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeIn 0.5s ease;
+      }
+
+      .cart-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .cart-item img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .cart-details {
+        flex: 1;
+      }
+
+      .cart-details h4 {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+
+      .price {
+        font-weight: bold;
+        color: #e67e22;
+        margin-top: 5px;
+      }
+
+      .quantity-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .quantity-controls button {
+        padding: 6px 11px;
+        border: none;
+        border-radius: 50%;
+        background-color: #e67e22;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .quantity-controls button:hover {
+        background-color: #cf6d17;
+        transform: scale(1.1);
+      }
+
+      .quantity {
+        font-weight: bold;
+        font-size: 1rem;
+        min-width: 20px;
+        text-align: center;
+        display: inline-block;
+      }
+
+      .total {
+        text-align: right;
+        font-size: 1.3rem;
+        margin-top: 2rem;
+        font-weight: bold;
+        color: #444;
+        transition: all 0.3s ease;
+      }
+
+      .order-button {
+        background: rgb(220, 107, 15);
+        color: white;
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgb(129, 77, 18);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        margin-right: 18%;
+      }
+
+      .order-button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: skewX(-45deg);
+        transition: all 0.5s ease;
+      }
+
+      .order-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px #222;
+      }
+
+      .order-button:hover::after {
+        left: 100%;
+      }
+
+      .order-button:active {
+        transform: scale(0.96);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Hunger's Hurt</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#Outsider">Product</a></li>
+        <li><a href="index.html#service">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Cart Section -->
+    <div class="cart-container">
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <div class="total" id="cartTotal">Total: ₹0</div>
+    </div>
+
+    <div style="text-align: right; margin-top: 1rem">
+      <button class="order-button" onclick="placeOrder()">
+        Place Your Order
+      </button>
+    </div>
+
+    <script>
+      const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function updateCartDisplay() {
+        const cartDiv = document.getElementById("cartItems");
+        const cartTotal = document.getElementById("cartTotal");
+        cartDiv.innerHTML = "";
+        let total = 0;
+
+        cartItems.forEach((item, index) => {
+          const itemTotal = item.price * item.quantity;
+          total += itemTotal;
+
+          const cartItemHTML = `
+            <div class="cart-item">
+              <img src="${item.image}" alt="${item.name}" />
+              <div class="cart-details">
+                <h4>${item.name}</h4>
+                <p class="price">₹${item.price} x ${item.quantity} = ₹${itemTotal}</p>
+                <div class="quantity-controls">
+                  <button onclick="changeQuantity(${index}, -1)">-</button>
+                  <span class="quantity">${item.quantity}</span>
+                  <button onclick="changeQuantity(${index}, 1)">+</button>
+                </div>
+              </div>
+            </div>`;
+          cartDiv.innerHTML += cartItemHTML;
+        });
+
+        cartTotal.textContent = `Total: ₹${total}`;
+      }
+
+      function changeQuantity(index, delta) {
+        cartItems[index].quantity += delta;
+        if (cartItems[index].quantity <= 0) {
+          cartItems.splice(index, 1);
+        }
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+        updateCartDisplay();
+      }
+
+      function placeOrder() {
+        if (cartItems.length === 0) {
+          alert("Your cart is empty!");
+          return;
+        }
+        localStorage.removeItem("cart");
+        window.location.href = "order.html";
+      }
+
+      updateCartDisplay();
+    </script>
+  </body>
+</html>

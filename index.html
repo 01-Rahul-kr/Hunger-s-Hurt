@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Hunger's Hurt</title>
+  </head>
+  <body>
+    <nav class="navbar animate__animated animate__fadeInDown">
+      <div class="logo">Hunger's Hurt</div>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#Outsider">Product</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="cart.html">
+            <i class="fas fa-shopping-cart" id="cartIcon"></i>
+            <span id="cartCount">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="main">
+      <h1>Hunger's Hurt</h1>
+      <p>
+        "Serving mouthwatering dishes made with <br />
+        love and the finest ingredients, our restaurant is <br />
+        your go-to spot for unforgettable flavors and warm hospitality."
+      </p>
+    </div>
+    <!-- food show -->
+    <div class="foodCart">
+      <div class="item">
+        <img src="foodCart1.jpg" alt="" />
+      </div>
+      <div class="item">
+        <img src="foodCart2.jpg" alt="" />
+      </div>
+      <div class="item">
+        <img src="foodCart3.jpg" alt="" />
+      </div>
+      <div class="item">
+        <img src="foodCart4.jpg" alt="" />
+      </div>
+    </div>
+    <!-- Product  -->
+    <div id="Outsider">
+      <h2>Our Product</h2>
+      <h3>Desserts</h3>
+    </div>
+
+    <div class="product-container">
+      <div class="product">
+        <div class="productItem">
+          <img src="desert1.jpeg" alt="Sesame Balls (Jian Dui) " />
+          <div class="productText">
+            <h2>Sesame Balls (Jian Dui)</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 49</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="desert2.jpg" alt="Mango Pudding " />
+          <div class="productText">
+            <h2>Mango Pudding</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 99</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="desert3.jpg" alt="Almond Jelly with Fruit Cocktail" />
+          <div class="productText">
+            <h2>Almond Jelly with Fruit Cocktail</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 69</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="desert4.jpg" alt="Fried Ice Cream " />
+          <div class="productText">
+            <h2>Fried Ice Cream</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 99</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main course -->
+
+    <div class="Outsider">
+      <h3>Main Course</h3>
+    </div>
+    <div class="product-container">
+      <div class="product">
+        <div class="productItem">
+          <img src="main1.webp" alt="General Tso’s Chicken" />
+          <div class="productText">
+            <h2>General Tso’s Chicken</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 299</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="main2.jpeg" alt="Fish Fillet in Black Bean Sauce" />
+          <div class="productText">
+            <h2>Fish Fillet in Black Bean Sauce</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 399</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="main3.jpeg" alt="Braised Tofu with Mushrooms" />
+          <div class="productText">
+            <h2>Braised Tofu with Mushrooms</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 499</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="main4.jpg" alt="Paneer" />
+          <div class="productText">
+            <h2>Paneer Butter mashala</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 399</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="Outsider">
+      <h3>Drinks</h3>
+    </div>
+    <div class="product-container">
+      <div class="product">
+        <div class="productItem">
+          <img src="drink1.jpeg" alt="Iced Lemon Tea " />
+          <div class="productText">
+            <h2>Iced Lemon Tea</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 199</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="drink2.webp" alt="Lychee Juice " />
+
+          <div class="productText">
+            <h2>Lychee Juice</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 99</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="drink3.jpg" alt="Cold Coffee" />
+
+          <div class="productText">
+            <h2>Cold Coffee</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 49</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="drink4.png" alt="Mango Smoothie " />
+
+          <div class="productText">
+            <h2>Mango Smoothie</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 99</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fast Food -->
+    <div class="Outsider">
+      <h3>Fast Food</h3>
+    </div>
+    <div class="product-container">
+      <div class="product">
+        <div class="productItem">
+          <img src="chola Bhatura.webp" alt="" />
+          <div class="productText">
+            <h2>Chola Bhature</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 49</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="moms.jpeg" alt="Momos" />
+          <div class="productText">
+            <h2>Momos</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 59</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="burger.jpg" alt="burger" />
+          <div class="productText">
+            <h2>Burger</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 49</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="roll.jpg" alt="roll" />
+          <div class="productText">
+            <h2>Egg Roll</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 49</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="manchuriyan.jpg" alt="Manchurian" />
+          <div class="productText">
+            <h2>manchuriyan</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 99</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="paneer wrap.webp" alt="paneerwrap" />
+          <div class="productText">
+            <h2>Paneer Wrap</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 99</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="sandwich.jpg" alt="snadwitch" />
+          <div class="productText">
+            <h2>Sandwich</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 59</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="productItem">
+          <img src="allu tiki.webp" alt="allu tiki" />
+          <div class="productText">
+            <h2>Allu Tiki</h2>
+            <h4><i class="fa-solid fa-indian-rupee-sign"></i> 99</h4>
+            <button class="addToCartBtn">
+              Add to Cart <i class="fa-solid fa-cart-plus"></i>
+            </button>
+            <div class="quantity-controls" style="display: none">
+              <button class="decrease">-</button>
+              <span class="quantity">1</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div id="service">
+      <h2>Our Service</h2>
+    </div>
+    <div class="service-contener">
+      <div class="service">
+        <h4>Dine-In Experience</h4>
+        <p>
+          Enjoy the warm, vibrant atmosphere of India right in your
+          neighborhood. Perfect for family meals, friendly gatherings, or
+          romantic dinners with flavorful Indian dishes made to order.
+        </p>
+      </div>
+      <div class="service">
+        <h4>Private Dining & Small Events</h4>
+        <p>
+          Book our cozy space for your next family event, team meeting, or
+          celebration. We’ll take care of the food and service—you just bring
+          the good vibes.
+        </p>
+      </div>
+      <div class="service">
+        <h4>Clean & Safe Service</h4>
+        <p>
+          We follow strict hygiene protocols, use fresh ingredients, and offer
+          contactless service for your peace of mind.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact us -->
+    <div id="contact">
+      <h2>Contact Us</h2>
+    </div>
+
+    <div class="contact-form">
+      <h3>📝 Send Us a Message</h3>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section about">
+          <h3>Hunger's Hurt</h3>
+          <p>
+            Delivering delicious flavors and warm service right to your
+            plate.<br />
+            Thank you for dining with us!
+          </p>
+        </div>
+
+        <div class="footer-section links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#Outsider">Products</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section contact">
+          <h4>Contact</h4>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Birra, Sarai, Hajipur,
+            Bihar
+          </p>
+          <p><i class="fa-solid fa-phone"></i> XXXXXX9218</p>
+          <p><i class="fa-solid fa-envelope"></i> hungershurt@example.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Hunger's Hurt. Made By
+          <i class="fa-solid fa-heart"></i> Rahul Yadav.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
