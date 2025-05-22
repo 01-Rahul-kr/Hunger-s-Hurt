@@ -109,6 +109,9 @@
       .cart-details {
         flex: 1;
       }
+      .cart-container h2{
+        margin-top: 50px;
+      }
 
       .cart-details h4 {
         margin: 0;
@@ -201,12 +204,48 @@
       .order-button:active {
         transform: scale(0.96);
       }
+
+      @media (max-width: 800px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          background-color: #333;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          width: 200px;
+          padding: 10px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-links li {
+          margin: 10px 0;
+        }
+
+        .navbar {
+          position: relative;
+        }
+      }
+
+      
     </style>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
       <div class="logo">Hunger's Hurt</div>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#Outsider">Product</a></li>
@@ -279,6 +318,14 @@
       }
 
       updateCartDisplay();
+
+      // Toggle navigation for small screens
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
     </script>
   </body>
 </html>

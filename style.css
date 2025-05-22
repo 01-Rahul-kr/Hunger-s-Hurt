@@ -23,7 +23,6 @@ nav {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional for better visual separation */
 }
 
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -375,6 +374,18 @@ nav {
   font-size: 0.85rem;
 }
 
+@media (max-width: 1000px) {
+  .item img {
+    width: 200px;
+    height: 190px;
+    border-radius: 200px;
+  }
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -470,7 +481,42 @@ nav {
     height: 70px;
     border-radius: 200px;
   }
+  .main h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+  .main p {
+    text-align: center;
+    font-size: 10px;
+  }
+  .menu-toggle {
+    display: block;
+  }
 
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .navbar {
+    position: relative;
+  }
 }
 
 /* flying effect */
@@ -508,7 +554,8 @@ nav {
 }
 
 /* for animation */
-.product, .item {
+.product,
+.item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
