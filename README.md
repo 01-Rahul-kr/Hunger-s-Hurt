@@ -1,5 +1,7 @@
 🍽️ Hunger's Hurt – A Delicious Digital Experience
+
 🔥 Project Overview
+
 A modern, responsive food website built with HTML, CSS, and vanilla JavaScript.  
 Explore delicious food categories, interactive product quantity controls, and a sleek contact form.
 
